@@ -8,7 +8,6 @@
       <input type="text" id="title" name="title">
       <label for="content">Inserisci il contenuto</label>
       <textarea name="content" id="content" cols="30" rows="10"></textarea>
-
       <input type="submit">
     </form>
   </section>
