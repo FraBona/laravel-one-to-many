@@ -6,6 +6,7 @@
 </head>
   <section class="container">
     <h1>Projects</h1>
+    <a href="{{route('admin.projects.create')}}">Crea Nuovo progetto</a>
   </section>
   <section class="container">
     <table class="table">

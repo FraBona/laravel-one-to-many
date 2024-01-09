@@ -33,7 +33,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($data['title'], '-');
+        $data['slug'] = Str::slug($data['title'], '_');
         $new_project = Project::create($data);
 
         return redirect()->route('admin.projects.show', $new_project);
@@ -63,7 +63,7 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $data = $request->all();
-        $data['slug'] = Str::slug($data['title'], '-');
+        $data['slug'] = Str::slug($data['title'], '_');
         $project->update($data);
 
         return redirect()->route('admin.projects.show', $project);
