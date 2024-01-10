@@ -6,7 +6,7 @@
 </head>
   <section class="container">
     <h1>Projects</h1>
-    <a href="{{route('admin.projects.create')}}">Crea Nuovo progetto</a>
+    <a href="{{route('admin.projects.create')}}" class="btn btn-primary">Crea Nuovo progetto</a>
   </section>
   <section class="container">
     <table class="table">
@@ -32,14 +32,14 @@
               {{isset($project->type) ? $project->type->name : '-'}}
             </td>
             <td>
-              <a href="{{route('admin.projects.edit', $project)}}">edit</a>
+              <a href="{{route('admin.projects.edit', $project)}}" class="btn btn-info">edit</a>
             </td>
             <td>
               <form action="{{route('admin.projects.destroy', $project)}}" method="post">
                 @csrf
                 @method('DELETE')
 
-                <input type="submit" value="delete" onclick="return confirm('are you sure you want delete this item')">
+                <input type="submit" value="delete" onclick="return confirm('are you sure you want delete this item')" class="btn btn-danger">
               </form>
             </td>
           </tr>

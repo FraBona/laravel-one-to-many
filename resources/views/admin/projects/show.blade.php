@@ -7,6 +7,8 @@
     @if ($project->type)
       <h5>{{$project->type->name}}</h5>
     @endif
+
+    <a href="{{route('admin.projects.index')}}" class="btn btn-primary">Home</a>
   </section>
 
 @endsection
